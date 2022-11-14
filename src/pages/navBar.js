@@ -21,9 +21,9 @@ const NavBar = () => {
                 <ul>
                     <li id="nav_title"><img src={icon} style={{ width: "32px", verticalAlign: "middle", borderRadius: "24px"  }} alt="NoobScience Icon" /> NoobScience</li>
                     <li><Link to={"/ReactSite"}>Home</Link></li>
-                    <li><Link to={"/about"}>About</Link></li>
-                    <li><Link to={"/projects"}>Projects</Link></li>
-                    <li><Link to={ "/skills" }>Skills</Link></li>
+                    <li><Link to={"/ReactSite/about"}>About</Link></li>
+                    <li><Link to={"/ReactSite/projects"}>Projects</Link></li>
+                    <li><Link to={ "/ReactSite/skills" }>Skills</Link></li>
                 </ul>
                 <hr />
             </div>
@@ -32,9 +32,9 @@ const NavBar = () => {
                     <li id="nav_title"><img src={icon} style={{ width: "32px", verticalAlign: "middle", borderRadius: "24px" }} alt="NoobScience Icon" /> NoobScience <button onClick= {update_toggle} id="op_toggle"><i className="bi bi-list"></i></button></li>
                     <div id="options">
                         <li><Link to={"/ReactSite"}>Home</Link></li>
-                        <li><Link to={"/about"}>About</Link></li>
-                        <li><Link to={"/projects"}>Projects</Link></li>
-                        <li><Link to={ "/skills" }>Skills</Link></li>
+                        <li><Link to={"/ReactSite/about"}>About</Link></li>
+                        <li><Link to={"/ReactSite/projects"}>Projects</Link></li>
+                        <li><Link to={ "/ReactSite/skills" }>Skills</Link></li>
                     </div>
                 </ul>
             </div>

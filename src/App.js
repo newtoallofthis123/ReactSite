@@ -16,13 +16,13 @@ function App() {
         <Route exact path='/ReactSite'>
           <Home />
         </Route>
-        <Route path='/about'>
+        <Route path='/ReactSite/about'>
           <About />
         </Route>
-        <Route path='/projects'>
+        <Route path='/ReactSite/projects'>
           <Projects />
         </Route>
-        <Route path='/skills'>
+        <Route path='/ReactSite/skills'>
           <Skills />
         </Route>
       </Switch>
