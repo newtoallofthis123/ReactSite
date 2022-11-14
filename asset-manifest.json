@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ReactSite/static/css/main.b424e44c.css",
-    "main.js": "/ReactSite/static/js/main.43cbcf0c.js",
+    "main.js": "/ReactSite/static/js/main.eda38ec2.js",
     "static/media/noobscience.png": "/ReactSite/static/media/noobscience.b22022503abb86f6f40f.png",
     "index.html": "/ReactSite/index.html",
     "main.b424e44c.css.map": "/ReactSite/static/css/main.b424e44c.css.map",
-    "main.43cbcf0c.js.map": "/ReactSite/static/js/main.43cbcf0c.js.map"
+    "main.eda38ec2.js.map": "/ReactSite/static/js/main.eda38ec2.js.map"
   },
   "entrypoints": [
     "static/css/main.b424e44c.css",
-    "static/js/main.43cbcf0c.js"
+    "static/js/main.eda38ec2.js"
   ]
 }
