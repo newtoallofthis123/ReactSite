@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path='/'>
+        <Route exact path='/ReactSite'>
           <Home />
         </Route>
         <Route path='/about'>

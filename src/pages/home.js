@@ -10,7 +10,7 @@ const Home = () => {
             <h3 className="m_sub_title"><span style={{ background: "#f888d6" }}>Open Source</span></h3>
             <h3 className="m_sub_title"><span style={{ background: "#95ee65" }}>Tech</span></h3>
             <p className="p_div">
-                Hello World!
+                
             </p>
         </div>
     )
