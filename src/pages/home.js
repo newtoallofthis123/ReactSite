@@ -1,17 +1,25 @@
 import React from 'react'
 import './static/css/global.css'
+import bg from './static/videos/bg.mp4'
+import dog from './static/images/dog.jpg'
 
 const Home = () => {
     return (
         <div>
+            <video src={bg} id='bg' autoPlay muted loop></video>
             <h1 className='main_title'><span style={{ color: "#75f0f3" }}>I</span>shan <span style={{ color: "#7bf57b" }}>J</span>oshi</h1>
             <h3 className="sub_title"><span style={{ background: "#75f0f3" }}>Student</span><span style={{ background: "#f888d6" }}>Open Source</span><span style={{ background: "#95ee65" }}>Tech</span></h3>
             <h3 className="m_sub_title"><span style={{ background: "#75f0f3" }}>Student</span></h3>
             <h3 className="m_sub_title"><span style={{ background: "#f888d6" }}>Open Source</span></h3>
-            <h3 className="m_sub_title"><span style={{ background: "#95ee65" }}>Tech</span></h3>
-            <p className="p_div">
-                
-            </p>
+            <h3 className="m_sub_title"><span style={{ background: "#95ee65" }}>Full Stack</span></h3>
+            <div id="header">
+                <div className="right">
+                    <img src={ dog } className="animate__animated animate__fadeIn animate__delay-2s animate__slow" alt="Dog"></img>
+                </div>
+                <div className="left">
+                    <h3 className="sub_title animate__animated animate__bounce"><a href="https://github.com/newtoallofthis123/ReactSite"><span style={{ background: "#f2ff00", fontSize: "18px", }}>This Website is Open Source!</span></a></h3>
+                </div>
+            </div>
         </div>
     )
 }
