@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/ReactSite/static/css/main.b424e44c.css",
-    "main.js": "/ReactSite/static/js/main.eda38ec2.js",
+    "main.css": "/ReactSite/static/css/main.db04d919.css",
+    "main.js": "/ReactSite/static/js/main.38fb5755.js",
+    "static/media/dog.jpg": "/ReactSite/static/media/dog.6c244bd45e91e5ffad85.jpg",
+    "static/media/bg.mp4": "/ReactSite/static/media/bg.c33ad4b2ba6003f7ad9f.mp4",
+    "static/media/profile.jpg": "/ReactSite/static/media/profile.12052ad7f29747fc6cd1.jpg",
     "static/media/noobscience.png": "/ReactSite/static/media/noobscience.b22022503abb86f6f40f.png",
     "index.html": "/ReactSite/index.html",
-    "main.b424e44c.css.map": "/ReactSite/static/css/main.b424e44c.css.map",
-    "main.eda38ec2.js.map": "/ReactSite/static/js/main.eda38ec2.js.map"
+    "main.db04d919.css.map": "/ReactSite/static/css/main.db04d919.css.map",
+    "main.38fb5755.js.map": "/ReactSite/static/js/main.38fb5755.js.map"
   },
   "entrypoints": [
-    "static/css/main.b424e44c.css",
-    "static/js/main.eda38ec2.js"
+    "static/css/main.db04d919.css",
+    "static/js/main.38fb5755.js"
   ]
 }
