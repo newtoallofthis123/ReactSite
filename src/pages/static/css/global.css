@@ -154,7 +154,6 @@ html {
 
     #header {
         display: none;
-        color: #f6ff00;
     }
 
     #profile {
@@ -168,6 +167,15 @@ html {
 
     .lyka {
         display: none;
+    }
+
+    .lyka_mobile {
+        display: block;
+        width: 30%;
+    }
+
+    .mobile_footer {
+        display: block;
     }
 }
 
@@ -183,6 +191,14 @@ html {
 
     .lyka_pic {
         width: 100%;
+    }
+
+    .lyka_mobile {
+        display: none;
+    }
+
+    .mobile_footer {
+        display: none;
     }
 }
 

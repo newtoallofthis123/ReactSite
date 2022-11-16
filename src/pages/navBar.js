@@ -57,7 +57,7 @@ const NavBar = () => {
             </div>
             <div className="m_nav">
                 <ul>
-                    <li id="nav_title"><img src={icon} style={{ width: "32px", verticalAlign: "middle", borderRadius: "24px" }} alt="NoobScience Icon" /> NoobScience <button onClick= {update_toggle} id="op_toggle"><i id="nav_icon" className="bi bi-list"></i></button></li>
+                    <li id="nav_title"><img src={icon} style={{ width: "32px", verticalAlign: "middle", borderRadius: "24px" }} alt="NoobScience Icon" /> NoobScience <button onClick= {update_toggle} className="animate__animated animate__wobble animate__delay-1s animate__slow" id="op_toggle"><i id="nav_icon" className="bi bi-list"></i></button></li>
                     <div id="options">
                         <li><Link to={"/ReactSite"}>Home</Link></li>
                         <li><Link to={"/ReactSite/about"}>About</Link></li>

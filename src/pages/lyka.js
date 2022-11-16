@@ -24,6 +24,9 @@ const Lyka = () => {
             <div id="good">
                 <h1>Lyka</h1>
                 <h2>And The Conquest of Dogs!</h2>
+                <div style={{ 'margin-left': '30%', width: '100%', }}>
+                    <img src={lyka} className='lyka_mobile' alt="Lyka The Dog" />
+                </div>
                 <div className="container">
                     <div className="row">
                         <div className="lyka col-3">
