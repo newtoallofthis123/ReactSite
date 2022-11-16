@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/ReactSite/static/css/main.db04d919.css",
-    "main.js": "/ReactSite/static/js/main.38fb5755.js",
+    "main.css": "/ReactSite/static/css/main.d618e39e.css",
+    "main.js": "/ReactSite/static/js/main.9be91d12.js",
+    "static/media/lyka_angry.png": "/ReactSite/static/media/lyka_angry.ff27f23f24abbd3c0752.png",
+    "static/media/lyka.png": "/ReactSite/static/media/lyka.395768d43a10df1f041b.png",
     "static/media/dog.jpg": "/ReactSite/static/media/dog.6c244bd45e91e5ffad85.jpg",
     "static/media/bg.mp4": "/ReactSite/static/media/bg.c33ad4b2ba6003f7ad9f.mp4",
     "static/media/profile.jpg": "/ReactSite/static/media/profile.12052ad7f29747fc6cd1.jpg",
     "static/media/noobscience.png": "/ReactSite/static/media/noobscience.b22022503abb86f6f40f.png",
     "index.html": "/ReactSite/index.html",
-    "main.db04d919.css.map": "/ReactSite/static/css/main.db04d919.css.map",
-    "main.38fb5755.js.map": "/ReactSite/static/js/main.38fb5755.js.map"
+    "main.d618e39e.css.map": "/ReactSite/static/css/main.d618e39e.css.map",
+    "main.9be91d12.js.map": "/ReactSite/static/js/main.9be91d12.js.map"
   },
   "entrypoints": [
-    "static/css/main.db04d919.css",
-    "static/js/main.38fb5755.js"
+    "static/css/main.d618e39e.css",
+    "static/js/main.9be91d12.js"
   ]
 }
