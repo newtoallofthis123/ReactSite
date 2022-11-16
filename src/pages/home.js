@@ -2,6 +2,7 @@ import React from 'react'
 import './static/css/global.css'
 import bg from './static/videos/bg.mp4'
 import dog from './static/images/dog.jpg'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -14,10 +15,12 @@ const Home = () => {
             <h3 className="m_sub_title"><span style={{ background: "#95ee65" }}>Full Stack</span></h3>
             <div id="header">
                 <div className="right">
-                    <img src={ dog } className="animate__animated animate__fadeIn animate__delay-2s animate__slow" alt="Dog"></img>
+                    <Link to="/ReactSite/lyka">
+                        <img src={ dog } className="animate__animated animate__fadeIn animate__delay-1s animate__slow" alt="Dog"></img>
+                    </Link>
                 </div>
                 <div className="left">
-                    <h3 className="sub_title animate__animated animate__bounce"><a href="https://github.com/newtoallofthis123/ReactSite"><span style={{ background: "#f2ff00", fontSize: "18px", }}>This Website is Open Source!</span></a></h3>
+                    <h3 className="sub_title"><a href="https://github.com/newtoallofthis123/ReactSite"><span style={{ background: "#f2ff00", fontSize: "18px", }}>This Website is Open Source!</span></a></h3>
                 </div>
             </div>
         </div>

@@ -7,6 +7,7 @@ import About from './pages/about'
 import Skills from './pages/skills'
 import Projects from './pages/projects'
 import Navbar from './pages/navBar';
+import Lyka from './pages/lyka';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path='/ReactSite/skills'>
           <Skills />
+        </Route>
+        <Route path='/ReactSite/lyka'>
+          <Lyka />
         </Route>
       </Switch>
     </Router>
