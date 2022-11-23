@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ReactSite/static/css/main.52a6593d.css",
-    "main.js": "/ReactSite/static/js/main.248f6dfe.js",
+    "main.js": "/ReactSite/static/js/main.2440b9aa.js",
     "static/media/dog.png": "/ReactSite/static/media/dog.8463e2e1df055c04ad58.png",
     "static/media/lyka_angry.png": "/ReactSite/static/media/lyka_angry.ff27f23f24abbd3c0752.png",
     "static/media/lyka.png": "/ReactSite/static/media/lyka.395768d43a10df1f041b.png",
@@ -11,10 +11,10 @@
     "static/media/noobscience.png": "/ReactSite/static/media/noobscience.b22022503abb86f6f40f.png",
     "index.html": "/ReactSite/index.html",
     "main.52a6593d.css.map": "/ReactSite/static/css/main.52a6593d.css.map",
-    "main.248f6dfe.js.map": "/ReactSite/static/js/main.248f6dfe.js.map"
+    "main.2440b9aa.js.map": "/ReactSite/static/js/main.2440b9aa.js.map"
   },
   "entrypoints": [
     "static/css/main.52a6593d.css",
-    "static/js/main.248f6dfe.js"
+    "static/js/main.2440b9aa.js"
   ]
 }
