@@ -14,6 +14,8 @@ const Skills = () => {
                     <li>React</li>
                     <li>Jquery</li>
                     <li>Node</li>
+                    <li>C</li>
+                    <li>C++</li>
                     <li>Postgresql</li>
                     <li>SQLite3</li>
                     <li>HTML</li>
