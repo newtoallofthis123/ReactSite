@@ -1,74 +1,78 @@
-import { Link } from "react-router-dom"
-import { useState } from "react"
 import "./static/css/global.css"
+import { Link } from "react-router-dom"
 import icon from "./static/images/noobscience.png"
+import data from "./static/db/data.json"
+import { useState } from "react"
+
+const dataList = () => {
+    return (
+        <datalist id="options">
+            {data["options"].map((option) => (
+                <option id={option} value={option}>{option}</option>
+            ))}
+        </datalist>
+    )
+}
 
 const NavBar = () => {
-    const [op_toggle, toggle_set] = useState(0)
-    const update_toggle = () => { 
-        const options = document.querySelector("#options")
-        const op_close = document.querySelector("#nav_icon")
-        if (op_toggle === 0) {
-            toggle_set(1)
-            document.getElementById("options").style.display = "block"
-            options.classList.add("animate__animated", "animate__fadeIn")
-            options.style.setProperty('--animate-duration', '1s');
-            options.addEventListener('animationend', () => {
-                options.classList.remove("animate__animated", "animate__fadeIn")
-            });
-            op_close.classList.add("animate__animated", "animate__fadeOut")
-            op_close.style.setProperty('--animate-duration', '0.5s');
-            op_close.addEventListener('animationend', () => {
-                op_close.classList.remove("animate__animated", "animate__fadeOut")
-                op_close.classList.remove("bi-list")
-                op_close.classList.add("bi-x")
-            });
-        }
-        if (op_toggle === 1) {
-            toggle_set(0)
-            document.getElementById("options").style.display = "none"
-            options.classList.add("animate__animated", "animate__fadeIn")
-            options.style.setProperty('--animate-duration', '1s');
-            options.addEventListener('animationend', () => {
-                options.classList.remove("animate__animated", "animate__fadeIn")
-            });
-            op_close.classList.add("animate__animated", "animate__fadeOut")
-            op_close.style.setProperty('--animate-duration', '0.5s');
-            op_close.addEventListener('animationend', () => {
-                op_close.classList.remove("animate__animated", "animate__fadeOut")
-                op_close.classList.remove("bi-x")
-                op_close.classList.add("bi-list")
-            });
+    const [query, setQuery] = useState("")
+
+    const navChange = (e) => {
+        let options = data["options"]
+        let tempQuery = (e.target.value).toLowerCase()
+        console.log((options.includes(tempQuery)))
+        if (options.includes(tempQuery)) {
+            setQuery(tempQuery.toString())
         }
     }
+
+    const navSubmit = (e) => {
+        e.preventDefault()
+        console.log(data["go"][query])
+        window.location = "" + data["go"][query]
+    }
     return (
-        <div>
+        <nav>
             <div className="nav">
-                <ul>
-                    <li id="nav_title"><img src={icon} style={{ width: "32px", verticalAlign: "middle", borderRadius: "24px"  }} alt="NoobScience Icon" /> NoobScience</li>
-                    <li><Link className="hover_animation_underline" to={"/ReactSite"}>Home</Link></li>
-                    <li><Link className="hover_animation_underline" to={"/ReactSite/about"}>About</Link></li>
-                    <li><Link className="hover_animation_underline" to={"/ReactSite/projects"}>Projects</Link></li>
-                    <li><Link className="hover_animation_underline" to={"/ReactSite/skills"}>Skills</Link></li>
-                    <li><a className="hover_animation_underline" href="https://github.com/newtoallofthis123"><i className="bi bi-github"></i> Github</a></li>
-                    <li><a className="hover_animation_underline" href="https://newtoallofthis123.github.io/tree">Social</a></li>
-                </ul>
-                <hr />
+                <Link to="/" className="navHeader">
+                    <img className="navIcon" src={icon} alt="NoobScience Icons" />
+                </Link>
+                <span className="search">
+                    {dataList()}
+                    <input type="text" onSubmit={navSubmit} onChange={navChange} list="options" placeholder="Search or jump to..." className="navInput" />
+                    <button type="submit" onClick={navSubmit} className="navButton">/</button>
+                </span>
+                <div className="navAlign">
+                    <li>
+                        <Link to="/about" className="navLink">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/projects" className="navLink">Projects</Link>
+                    </li>
+                    <li>
+                        <Link to="/skills" className="navLink">Skills</Link>
+                    </li>
+                    <li>
+                        <Link to="/resume" className="navLink">Resume</Link>
+                    </li>
+                    <li>
+                        <Link to="/links" className="navLink">Social</Link>
+                    </li>
+                </div>
             </div>
-            <div className="m_nav">
-                <ul>
-                    <li id="nav_title"><img src={icon} style={{ width: "32px", verticalAlign: "middle", borderRadius: "24px" }} alt="NoobScience Icon" /> NoobScience <button onClick= {update_toggle} className="animate__animated animate__wobble animate__delay-1s animate__slow" id="op_toggle"><i id="nav_icon" className="bi bi-list"></i></button></li>
-                    <div id="options">
-                        <li><Link to={"/ReactSite"}>Home</Link></li>
-                        <li><Link to={"/ReactSite/about"}>About</Link></li>
-                        <li><Link to={"/ReactSite/projects"}>Projects</Link></li>
-                        <li><Link to={"/ReactSite/skills"}>Skills</Link></li>
-                        <li><a href="https://github.com/newtoallofthis123">Github</a></li>
-                        <li><a href="https://newtoallofthis123.github.io/tree">Social</a></li>
-                    </div>
-                </ul>
+            <div className="nav">
+                <div className="dropdown">
+                    <button className="notifications" type="button" id="notifications" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i className="bi bi-bell"></i>
+                    </button>
+                    <ul className="dropdown-menu" aria-labelledby="notifications">
+                        {data["recents"].map((recent) => (
+                            <li><a className="dropdown-item" href={recent.link}>{recent.title}</a></li>
+                        ))}
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
     )
 }
 

@@ -1,36 +1,76 @@
-import React from 'react'
-import './static/css/global.css'
-import bg from './static/videos/bg.mp4'
-import dog from './static/images/dog.jpg'
-import dog1 from './static/images/dog.png'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import moment from 'moment/moment';
+import "./static/css/global.css"
+import data from "./static/db/data.json"
+import Main from "./main"
+
+const RepositoryList = () => {
+    const [repositories, setRepositories] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(`https://api.github.com/users/newtoallofthis123/repos?sort=updated&per_page=10`);
+            const data = await response.json();
+            setRepositories(data);
+        }
+        fetchData();
+    }, []);
+
+    return (
+        <div style={{margin: "1.2rem"}}>
+            {repositories.map((repo) => (
+                <div className='repo' key={repo.id}>
+                    <img src={repo.owner.avatar_url} alt="UserPhoto" />
+                    <a href={repo.html_url}>{repo.full_name}</a>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+const RecentList = () => {
+    return (
+        <div>
+            {data["recents"].map((recent) => (
+                <div className="Timeline">
+                    <div className='recent' key={recent.id}>
+                        <a href={recent.link}>{recent.title}</a>
+                        <p className="timeAgo">{moment(recent.time, "DD MM YYYY").fromNow()}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    )
+}
 
 const Home = () => {
     return (
         <div>
-            <video src={bg} id='bg' autoPlay muted loop></video>
-            <h1 className='main_title'><span style={{ color: "#75f0f3" }}>I</span>shan <span style={{ color: "#7bf57b" }}>J</span>oshi</h1>
-            <h3 className="sub_title"><span style={{ background: "#75f0f3" }}>Student</span><span style={{ background: "#f888d6" }}>Open Source</span><span style={{ background: "#95ee65" }}>Tech</span></h3>
-            <h3 className="m_sub_title"><span style={{ background: "#75f0f3" }}>Student</span></h3>
-            <h3 className="m_sub_title"><span style={{ background: "#f888d6" }}>Open Source</span></h3>
-            <h3 className="m_sub_title"><span style={{ background: "#95ee65" }}>Full Stack Dev</span></h3>
-            <div id="header">
-                <div className="right">
-                    <Link to="/ReactSite/lyka">
-                        <img src={ dog } className="animate__animated animate__fadeIn animate__delay-1s animate__slow" alt="Dog"></img>
-                    </Link>
+            <div className="main-flex">
+                <div className="item1">
+                    <div className="repo_header">
+                        <p>Top Repositories</p>
+                        <button className="btn btn-primary new_repo"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="octicon octicon-repo">
+                            <path fill='#ffff' fillRule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                        </svg> New</button>
+                    </div>
+                    <input type="text" placeholder='Find a repository...' className="repo-search" />
+                    {RepositoryList()}
+                    <div className="div-card" onClick={() => { window.location = 'https://github.com/newtoallofthis123/ReactSite' }} style={{ marginTop: "10%", textAlign: "center", marginRight: "1.8rem", marginLeft: "1.8rem", "cursor": "pointer" }}>
+                        <h3 className="h3">Made with ❤️</h3>
+                        <h3 className="h3">And ⏳ React</h3>
+                    </div>
                 </div>
-                <div className="left">
-                    <h3 className="sub_title"><a href="https://github.com/newtoallofthis123/ReactSite"><span style={{ background: "#f2ff00", fontSize: "18px", }}>This Website is Open Source!</span></a></h3>
+                <div className="item2">
+                    <Main />
+                </div>
+                <div className="item3">
+                    <div className="style-div">
+                        <p style={{ color: "#c9d1d9", fontWeight: "600"}}>Latest Changes</p>
+                        {RecentList()}
+                    </div>
                 </div>
             </div>
-            <footer className="mobile_footer">
-                <div style={{ textAlign: 'right', }}>
-                    <Link to="/ReactSite/lyka">
-                        <img src={ dog1 } className="animate__animated animate__fadeIn animate__delay-1s animate__slow" width="120px" alt="Dog"></img>
-                    </Link>
-                </div>
-            </footer>
         </div>
     )
 }

@@ -1,0 +1,50 @@
+{
+    "options": ["about", "projects", "contact", "skills", "resume", "blog", "home", "links"],
+    "go": {
+        "about": "/about",
+        "projects": "/projects",
+        "contact": "https://links.noobscience.rocks",
+        "skills": "/skills",
+        "resume": "/resume",
+        "blog": "https://blog.noobscience.rocks",
+        "home": "/",
+        "links": "https://links.noobscience.rocks"
+    },
+    "recents": [
+        {
+            "title": "Release of ReactSite v.3.2",
+            "link": "https://reactsite.noobscience.rocks",
+            "time": "28-01-2023"
+        },
+        {
+            "title": "Release of About v.2.2",
+            "link": "https://noobscience.rocks",
+            "time": "26-01-2023"
+        },
+        {
+            "title": "Update to GitHub Profile",
+            "link": "https://github.com/newtoallofthis123",
+            "time": "25-01-2023"
+        },
+        {
+            "title": "Release of Links v.2.1",
+            "link": "https://links.noobscience.rocks",
+            "time": "23-01-2023"
+        },
+        {
+            "title": "New Domain! (noobscience.rocks)",
+            "link": "https://noobscience.rocks",
+            "time": "22-01-2023"
+        },
+        {
+            "title": "Part of GitHub Student Community",
+            "link": "https://education.github.com/",
+            "time": "21-01-2023"
+        },
+        {
+            "title": "New Blog Post!",
+            "link": "https://blog.noobscience.rocks/negative-time",
+            "time": "13-01-2023"
+        }
+    ]
+}

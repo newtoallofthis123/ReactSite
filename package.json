@@ -1,7 +1,7 @@
 {
-  "homepage": "https://newtoallofthis123.github.io/ReactSite/",
+  "homepage": "https://reactsite.noobscience.rocks",
   "name": "new_site",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -9,7 +9,9 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.3",
     "jquery": "^3.6.1",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.2.0",
